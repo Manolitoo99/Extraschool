@@ -1,0 +1,24 @@
+package com.springdemo.helloworld;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class HelloWorldController {
+
+	@RequestMapping
+	public String helloWorld() {
+		return "aplicacion ExtraSchool";
+	}
+
+	@RequestMapping("/AboutUs")
+	public String aboutus() {
+		return "Sobre nosotros";
+	}
+
+	@RequestMapping("/Contacto")
+	public String contacto() {
+		return "Contacto de ExtraSchool";
+	}
+
+}
