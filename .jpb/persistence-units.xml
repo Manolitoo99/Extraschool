@@ -4,7 +4,7 @@
     <persistence-units>
       <persistence-unit name="Default">
         <packages>
-          <package value="com.springdemo.helloworld" />
+          <package value="com.extraschool.extraschoolProject" />
         </packages>
       </persistence-unit>
     </persistence-units>
