@@ -1,24 +1,23 @@
 package com.springdemo.helloworld;
 
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HelloWorldController {
+	private final String response = "extraschool";
 
-	@RequestMapping
-	public String helloWorld() {
-		return "aplicacion ExtraSchool";
-	}
-
-	@RequestMapping("/AboutUs")
+	@RequestMapping(value = "/AboutUs", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public String aboutus() {
-		return "Sobre nosotros";
+		return response;
 	}
 
-	@RequestMapping("/Contacto")
+	@RequestMapping(value = "/Contacto", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public String contacto() {
-		return "Contacto de ExtraSchool";
+
+		return response;
 	}
 
 }
