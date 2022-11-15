@@ -5,12 +5,25 @@
              version="3.0">
   <persistence-unit name="default">
 
+      <class>entity.Alumnos</class>
+      <class>entity.Chat</class>
+      <class>entity.Informacion</class>
+      <class>entity.Materias</class>
+      <class>entity.Profesor</class>
+      <properties>
+          <property name="hibernate.connection.url"
+                    value="jdbc:mysql://localhost:3306/extraschool?useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC"/>
+          <property name="hibernate.connection.driver_class" value="com.mysql.cj.jdbc.Driver"/>
+          <property name="hibernate.connection.username" value="root"/>
+          <property name="hibernate.connection.password" value="stucom"/>
+      </properties>
   </persistence-unit>
-    <persistence-unit name="persistenceUnit">
-        <class>Entities.Alumnos</class>
-        <class>Entities.Chat</class>
-        <class>Entities.Materias</class>
-        <class>Entities.Profesor</class>
+    <persistence-unit name="extraschoolPersitence">
+        <class>model.Alumnos</class>
+        <class>model.Chat</class>
+        <class>model.Informacion</class>
+        <class>model.Materias</class>
+        <class>model.Profesor</class>
         <properties>
             <property name="hibernate.connection.url"
                       value="jdbc:mysql://localhost:3306/extraschool?useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC"/>
